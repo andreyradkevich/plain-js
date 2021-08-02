@@ -1,7 +1,4 @@
-const append = ({ el, children }) => {
-  const child = document.createRange().createContextualFragment(children);
-  el.appendChild(child);
-};
+import { append } from "../helpers/index.js";
 
 const element = function (elType, children, options = {}) {
   const el = document.createElement(elType);

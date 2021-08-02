@@ -1,11 +1,9 @@
+import layout from "../layouts/index.js";
+
 const home = function () {
-  import("../layouts/index.js").then(async (data) => {
-    const layout = data.default;
+  const el = layout("<p>Home page</p>");
 
-    const el = await layout("<p>Home page</p>");
-
-    document.getElementById("root").appendChild(el);
-  });
+  document.getElementById("root").appendChild(el);
 };
 
 export default home;

@@ -1,7 +1,6 @@
-const layout = async function (children) {
-  const data = await import("../components/element.js");
-  const element = data.default;
+import element from "../components/element.js";
 
+const layout = function (children) {
   return element("div", [
     element("button", "Home page", {
       onClick: () => console.log("click"),
