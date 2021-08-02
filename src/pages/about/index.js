@@ -1,9 +1,11 @@
 const aboutUs = function () {
-  const data = import("../../layouts/index.js");
+  import("../../layouts/index.js").then(async (data) => {
+    const layout = data.default;
 
-  const layout = data.default;
+    const el = await layout("<p>About page</p>");
 
-  document.getElementById("root").innerHTML = layout("<p>About page</p>");
+    document.getElementById("root").appendChild(el);
+  });
 };
 
 export default aboutUs;

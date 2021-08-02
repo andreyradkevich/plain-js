@@ -9,7 +9,6 @@ const element = function (elType, children, options = {}) {
   const { onClick } = options;
 
   if (onClick) {
-    console.log(el, "el");
     el.addEventListener("click", (e) => {
       onClick(e);
     });
@@ -17,13 +16,17 @@ const element = function (elType, children, options = {}) {
 
   if (Array.isArray(children)) {
     children.map((child) => {
-      append({ el, children: child });
+      if (typeof child === "string") {
+        return append({ el, children: child });
+      }
+
+      return el.appendChild(child);
     });
   } else {
     append({ el, children });
   }
 
-  return el.outerHTML;
+  return el;
 };
 
 export default element;
