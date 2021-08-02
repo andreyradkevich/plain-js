@@ -1,5 +1,6 @@
 import { append } from "../helpers/index.js";
 
+// You can create element by this function
 const element = function (elType, children, options = {}) {
   const el = document.createElement(elType);
 

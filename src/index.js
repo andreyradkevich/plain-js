@@ -1,7 +1,6 @@
-const root = document.getElementById("root");
-const pathname = window.location.pathname;
-
 (async () => {
+  const pathname = window.location.pathname;
+
   if (pathname === "/") {
     import("./pages/index.js").then((data) => {
       const home = data.default;
