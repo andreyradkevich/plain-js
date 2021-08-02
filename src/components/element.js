@@ -23,7 +23,7 @@ const element = function (elType, children, options = {}) {
     append({ el, children });
   }
 
-  return el;
+  return el.outerHTML;
 };
 
 export default element;
