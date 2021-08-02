@@ -1,0 +1,11 @@
+{
+  "name": "plain-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:andreyradkevich/plain-js.git",
+  "author": "Andrey Radkevich <andrey@48pacific.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
