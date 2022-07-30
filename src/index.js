@@ -1,17 +1,11 @@
-(async () => {
-  const pathname = window.location.pathname;
+import { router } from "./lib/router/index.js";
 
-  if (pathname === "/") {
-    import("./pages/index.js").then((data) => {
-      const home = data.default;
-      home();
-    });
-  }
+import home from "./pages/index.js";
+import about from "./pages/about.js";
 
-  if (pathname === "/about") {
-    import("./pages/about/index.js").then((data) => {
-      const about = data.default;
-      about();
-    });
-  }
-})();
+router({
+  routes: {
+    "/": home(),
+    "/about": about(),
+  },
+});
