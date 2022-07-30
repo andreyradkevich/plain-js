@@ -1,3 +1,5 @@
+import "./lib/initialization/index.js";
+
 import { router } from "./lib/router/index.js";
 
 import home from "./pages/index.js";
