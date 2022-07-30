@@ -1,0 +1,1 @@
+export const removeChildren=e=>{document.getElementById(e).innerHTML=""};

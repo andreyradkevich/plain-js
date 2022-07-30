@@ -1,0 +1,1 @@
+import{link}from"../lib/router/index.js";import{insertInRoot}from"../lib/element/index.js";import{removeChildren}from"../lib/render/index.js";export default function(){removeChildren("root");const e=document.createElement("div");e.id="list",insertInRoot(e),link("/about","About","list")}

@@ -1,0 +1,1 @@
+export const insertInRoot=e=>{document.getElementById("root").appendChild(e)};export const createElement=e=>{document.createElement(e)};
