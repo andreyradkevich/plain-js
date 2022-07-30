@@ -11,6 +11,5 @@ export default function () {
 
   insertInRoot(list);
 
-  link("/", "Home", "list");
   link("/about", "About", "list");
 }

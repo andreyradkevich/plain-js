@@ -5,7 +5,7 @@ import about from "./pages/about.js";
 
 router({
   routes: {
-    "/": home(),
-    "/about": about(),
+    "/": home,
+    "/about": about,
   },
 });

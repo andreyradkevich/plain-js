@@ -1,5 +1,5 @@
 import { link } from "../lib/router/index.js";
-import { insertInRoot } from "../lib/element/index.js";
+import { insertInRoot, createElement } from "../lib/element/index.js";
 
 import { removeChildren } from "../lib/render/index.js";
 
@@ -12,5 +12,6 @@ export default function () {
   insertInRoot(list);
 
   link("/", "Home", "list");
-  link("/about#", "About", "list");
+
+  createElement("div");
 }

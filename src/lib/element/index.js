@@ -3,3 +3,7 @@ export const insertInRoot = (node) => {
 
   rootElement.appendChild(node);
 };
+
+export const createElement = (tagName) => {
+  document.createElement(tagName);
+};
