@@ -9,7 +9,7 @@
     "build": "npm run clean && npm run create-dist && node minify",
     "clean": "rm -rf dist",
     "create-dist": "cp -r src dist",
-    "start": "node server.js"
+    "start": "npm run build && node server.js"
   },
   "dependencies": {
     "express": "4.17.1",
