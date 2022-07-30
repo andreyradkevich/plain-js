@@ -6,13 +6,9 @@
   "author": "Andrey Radkevich <andrey@48pacific.com>",
   "license": "MIT",
   "scripts": {
-    "build": "npm run clean && npm run create-dist && node minify",
-    "clean": "rm -rf dist",
-    "create-dist": "cp -r src dist",
-    "start": "npm run build && node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "express": "4.17.1",
-    "terser": "5.14.2"
+    "express": "4.17.1"
   }
 }
