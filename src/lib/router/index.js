@@ -1,8 +1,18 @@
+import { removeChildren } from "../render/index.js";
+
+const initializer = (callback) => {
+  removeChildren("root");
+
+  return () => {
+    callback();
+  };
+};
+
 const getPage = (routes, pathname) => {
   const rootDiv = document.getElementById("root");
 
   if (rootDiv) {
-    routes[pathname || window.location.pathname]();
+    initializer(routes[pathname || window.location.pathname])();
   }
 };
 
